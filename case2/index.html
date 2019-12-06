@@ -136,7 +136,63 @@
 
          <fieldset id="creditCard">
             <legend>Credit Card (required)</legend>
+            <fieldset>
+               <label class="cardLabel">
+                  <input name="cCard" value="amex" type="radio" required/>
+                  <img src="sb_amex.png"/>
+               </label>
+               <label class="cardLabel">
+                  <input name="cCard" value="discover" type="radio" required/>
+                  <img src="sb_discover.png"/>
+               </label>
+               <label class="cardLabel">
+                  <input name="cCard" value="master" type="radio" required/>
+                  <img src="sb_master.png"/>
+               </label>
+               <label class="cardLabel">
+                  <input name="cCard" value="visa" type="radio" required/>
+                  <img src="sb_visa.png"/>
+               </label>
+            </fieldset>
+            <label for="cardBox">Credit Card Number</label>
+            <input id="cardBox" name="cardNumber" type="text" 
+               pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" required/> 
+            <label id="mList">Expiration Date</label>
+            <input id="mList" type="text" list="monthList"/>
+            <datalist id="monthList" for="cardMonth" required>
+               <option value="">--Month--</option>
+               <option value="1">January(01)</option>
+               <option value="2">February(02)</option>
+               <option value="3">March(03)</option>
+               <option value="4">April(04)</option>
+               <option value="5">May(05)</option>
+               <option value="6">June(06)</option>
+               <option value="7">July(07)</option>
+               <option value="8">August(08)</option>
+               <option value="9">September(09)</option>
+               <option value="10">October(10)</option>
+               <option value="11">November(11)</option>
+               <option value="12">December(12)</option>
+            </datalist>
+
+            <input id="yList" type="text" list="yearList"/>
+            <datalist id="yearList" for="cardYear" required>
+               <option value="">--Year--</option>
+               <option value="2017">2017</option>
+               <option value="2018">2017</option>
+               <option value="2019">2017</option>
+               <option value="2020">2017</option>
+               <option value="2021">2017</option>
+            </datalist>
+
+            <label for="cscBox">CSC</label>
+            <input id="cscBox" name="csc" type="text" 
+               pattern="^\d{3}$" maxlength="3" placeholder="nnn" required/>
          </fieldset>
+         
+         <button type="submit">
+            <img src="sb_button.png" alt="next"/>
+         </button>
       </form>
 
       <aside>
