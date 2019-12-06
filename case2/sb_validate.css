@@ -13,7 +13,7 @@
 
 
 /* Validation Styles */
-/*changes the background color of the input text boxes and png when clicked on */
+/* changes the background color of the input text boxes and png when clicked on */
 input:not([type='radio']):focus{
    background-color: rgb(255,218,165);
 }
